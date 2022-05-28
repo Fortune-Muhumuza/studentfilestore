@@ -1,0 +1,22 @@
+.dashboardContainer{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboardHeader{
+margin-bottom: 2rem;
+}
+
+.dashboardHeader > h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.dashboardContents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
