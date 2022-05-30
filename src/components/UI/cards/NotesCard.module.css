@@ -1,0 +1,65 @@
+.container{
+  
+    /* font-size: 3rem; */
+}
+
+.cardBody{
+    height: 18rem;
+    width: 30rem;
+    background-color: rgb(250, 242, 225);
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.28); 
+box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.28);
+padding: 2rem;
+margin-bottom: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-radius: .5rem;
+}
+
+.cardTitle{
+    font-size: 1rem;
+}
+
+.cardDescription{
+    font-size: 1.5rem;
+    color: green;
+}
+
+.cardId{
+  color: grey;
+    font-weight: 700;
+}
+
+.cardId > p{
+    font-size: 1.3rem;
+}
+
+.cardFormat{
+    font-weight: 600;
+    padding: 1rem;
+    width: 9rem;
+    /* background-color: lightgrey; */
+    font-size: 1.4rem;
+}
+
+.cardFooter{
+ display: flex;
+ justify-content: space-between;
+}
+
+.cardFooterContent{
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 12rem;
+    padding: .5rem;
+    border-radius: 10rem;
+    background-color: aqua;
+}
+
+.cardFooterContent:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+

@@ -1,0 +1,20 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.headerSearch{
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    background-color: rgb(236, 233, 233);
+}
+
+.headerSearch:focus{
+    outline: none;
+}
