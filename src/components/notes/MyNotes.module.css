@@ -1,0 +1,22 @@
+.myNotesContainer {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.myNotesHeader {
+  margin-bottom: 2rem;
+}
+
+.myNotesHeader > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.myNotesContents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
