@@ -128,3 +128,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> 18b7e70776dd641ffef7a04410d039d94376279d
+
+# Local Netlify folder
+.netlify

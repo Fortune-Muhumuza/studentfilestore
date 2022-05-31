@@ -29,14 +29,15 @@ const NotesCard = (props) => {
       description: props.description,
       format: props.format,
     };
+    localArr.push(specificNote);
  
     const tempArr = []
      const storedNotes = JSON.parse(localStorage.getItem('downloadNotes'))
      console.log('stored notes', storedNotes)
-     if(storedNotes == null || storedNotes == undefined){    
+     if(!storedNotes || storedNotes == null || storedNotes == undefined){    
       localStorage.setItem('downloadNotes', JSON.stringify(localArr))
      }else{
-      tempArr.push(storedNotes, specificNote)
+      tempArr.push(...storedNotes, specificNote)
       localStorage.setItem('downloadNotes', JSON.stringify(tempArr))
       console.log('temp arr', tempArr)
      }
