@@ -7,7 +7,7 @@ const MyNotes = () => {
 
   const handleFetchMyNotes = () => {
     const favNotes = JSON.parse(localStorage.getItem("downloadNotes"));
-    console.log('fave notes', favNotes[0])
+    // console.log('fave notes', favNotes[0])
     setFavoriteNotes(favNotes);
   };
 
