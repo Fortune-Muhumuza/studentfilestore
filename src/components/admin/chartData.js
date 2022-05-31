@@ -1,5 +1,5 @@
 export const chartData = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['users', 'students', 'teachers', 'notes', 'rates', 'usage'],
     datasets: [
       {
         label: '# of Votes',

@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import styles from "./Statistics.module.css";
 import { users } from "./dummyData";
-import UserDetailsCard from "../UI/cards/UserDetailsCard"
-import { Doughnut } from 'react-chartjs-2';
+import UserDetailsCard from "../UI/cards/UserDetailsCard";
+import { Chart as ChartJS, registerables } from "chart.js";
+import { Chart } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import { chartData } from "./chartData";
+ChartJS.register(...registerables);
 
 const Statistics = () => {
   const [searchItem, setSearchItem] = useState("");
   const [searchResults, setSearchResults] = useState(users);
   const [isSearching, setIsSearching] = useState(false);
 
-  console.log('chart data', chartData)
+  console.log("chart data", chartData);
 
   const handleInputChange = (e) => {
     setSearchItem(e.target.value);
@@ -21,7 +24,7 @@ const Statistics = () => {
   }
 
   const handleSearch = () => {
-      setIsSearching(true);
+    setIsSearching(true);
     var filter = "firstName";
     var keyword = capitalize(searchItem);
 
@@ -41,21 +44,26 @@ const Statistics = () => {
       <div className={styles.statisticsHeader}>
         <h1>statistics</h1>
       </div>
-      <p>Filter</p>
+ 
+      
       <div className={styles.statisticsContents}>
+      <p>Filter</p>
         <input
           placeholder="search"
           value={searchItem}
           onChange={handleInputChange}
         ></input>
-        <Doughnut data={chartData} />
+     
         {isSearching && (
           <div>
             <h1>Searching...</h1>
           </div>
         )}
         <button onClick={() => setTimeout(handleSearch, 2000)}>search</button>
-
+        <div className={styles.statisticsChart}>
+          <Doughnut data={chartData} />
+        </div>
+        <div>
         {searchResults.map((user) => (
           <UserDetailsCard
             firstName={user.firstName}
@@ -65,14 +73,9 @@ const Statistics = () => {
             rating={user.rating}
             profilePicture={user.profilePicture}
           />
-          // <div className={styles.statisticsCard} key={user.id}>
-          //     <h1>{user.firstName}</h1>
-          //     <h1>{user.secondName}</h1>
-          //     <p>{user.email}</p>
-          //     <p>Rating: {user.rating}</p>
-          //     <img src={user.profilePicture} alt="dp" className={styles.profilePicture}/>
-          //     </div>
+   
         ))}
+        </div>
       </div>
     </div>
   );
