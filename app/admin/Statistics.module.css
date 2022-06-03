@@ -1,0 +1,33 @@
+.statisticsContainer {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .statisticsHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .statisticsHeader > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: dodgerblue;
+  }
+  
+  .statisticsContents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profilePicture{
+      height: 8rem;
+border-radius: 5rem;
+  }
+
+  .statisticsChart{
+      width: 40rem;
+
+  }
+  
