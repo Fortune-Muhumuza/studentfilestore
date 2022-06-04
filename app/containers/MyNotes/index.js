@@ -46,6 +46,16 @@ const handleFetchMyNotes = () => {
   setFavoriteNotes(favNotes);
 };
 
+const handleRemoveFromFavorites = (id) => {
+// console.log('id to remive is', id)
+favoriteNotes.forEach(element => {
+  
+});
+const newFavorites = favoriteNotes.filter(note => note.id !== id)
+localStorage.setItem('downloadNotes', JSON.stringify(newFavorites))
+// console.log('filtered is', newFavorites)
+}
+
 useEffect(() => {
   handleFetchMyNotes();
 }, []);
@@ -64,6 +74,7 @@ useEffect(() => {
             format={note.format}
             id={note.id}
             isMyNotes={true}
+            handleRemoveFromFavorites={handleRemoveFromFavorites}
           />
         ))}
       </Contents>

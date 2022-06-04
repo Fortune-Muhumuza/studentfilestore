@@ -59,7 +59,7 @@ const CardFooterContent = styled.div`
 
 export default function NotesCard(props) {
   const handleDownload = () => {
-    setIsButtonActive(false);
+    // setIsButtonActive(false);
     const localArr = []
     const specificNote = {
       id: props.id,
@@ -112,7 +112,7 @@ export default function NotesCard(props) {
         <CardFooter>
           {
             props.isMyNotes &&
-            <CardFooterContent onClick={() => setTimeout(handleDownload, 1500)}>
+            <CardFooterContent onClick={() => setTimeout(props.handleRemoveFromFavorites(props.id), 1500)}>
             <p> Remove </p>
             </CardFooterContent>
           }
