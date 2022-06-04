@@ -110,12 +110,21 @@ export default function NotesCard(props) {
           </CardFormat>
         }
         <CardFooter>
+          {
+            props.isMyNotes &&
+            <CardFooterContent onClick={() => setTimeout(handleDownload, 1500)}>
+            <p> Remove </p>
+            </CardFooterContent>
+          }
+          {props.isDashboard &&
           <CardFooterContent onClick={() => setTimeout(handleDownload, 1500)}>
             <p> "Download" </p>
             </CardFooterContent>
+}{props.isDashboard &&
           <CardFooterContent onClick={() => setTimeout(handleAddToFavorites, 1500)}>
             <p> "Add to favorites"</p>
             </CardFooterContent>
+}
         </CardFooter>
         </CardBody>
     </div>

@@ -18,27 +18,35 @@ import Sidebar from '../../components/Sidebar';
 import styled from 'styled-components';
 import GlobalStyle from '../../global-styles';
 import MyNotes from '../MyNotes/Loadable';
+import Navbar from '../Navbar';
+import Statistics from '../Statistics';
 
 const Container = styled.div`
-display: flex
+  display: flex;
 `;
+
+const Contents = styled.div`
+flex: 1;
+`
 
 export default function App() {
   return (
     <Container>
       <div>
-      <Sidebar />
+        <Sidebar />
       </div>
-      <div>
-      <Switch>
-        <Route exact path="/" component={Dashboard} />
-        <Route exact path="/notes" component={NotesCard} />
-        <Route exact path="/myNotes" component={MyNotes} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Contents>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/notes" component={NotesCard} />
+          <Route exact path="/myNotes" component={MyNotes} />
+          <Route exact path="/statistics" component={Statistics} />
+          <Route component={NotFoundPage} />
+        </Switch>
 
-      <GlobalStyle />
-      </div>
-      </Container>
+        <GlobalStyle />
+        </Contents>
+    </Container>
   );
 }
