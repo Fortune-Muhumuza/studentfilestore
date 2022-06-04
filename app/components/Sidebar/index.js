@@ -64,7 +64,7 @@ function Sidebar() {
           </div>
           <div>
             <NavbarItem>
-              <Link to="/stats"> Statistics</Link>
+              <Link to="/statistics"> Statistics</Link>
             </NavbarItem>
           </div>
         </ul>

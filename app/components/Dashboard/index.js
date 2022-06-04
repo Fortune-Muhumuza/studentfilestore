@@ -9,7 +9,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { notes } from '../../admin/dummyData';
 import NotesCard from '../../containers/NotesCard/Loadable';
-import Sidebar from '../Sidebar';
+import Navbar from '../../containers/Navbar';
+
 
 
 const Container = styled.div`
