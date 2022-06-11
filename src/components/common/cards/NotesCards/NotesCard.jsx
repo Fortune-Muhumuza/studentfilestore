@@ -6,7 +6,6 @@ const NotesCard = (props) => {
   const [backgroundColor, setBackgroundColor] = React.useState();
   const [isButtonActive, setIsButtonActive] = React.useState(true);
   const [isAddingButtonActive, setIsAddingButtonActive] = React.useState(true);
-  const [selectedNote, setSelectedNotes] = React.useState([]);
 
   const handleFormatButtonColor = () => {
     if (formatButtonColorCode === "PDF") {
