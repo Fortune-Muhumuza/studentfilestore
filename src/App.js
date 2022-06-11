@@ -2,12 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import Sidebar from "./components/UI/navigation/Sidebar";
-import Dashboard from "./components/notes/Dashboard";
-import MyNotes from "./components/notes/MyNotes";
+import Dashboard from "./components/pages/Dashboard/Dashboard";
+import MyNotes from "./components/pages/MyNotes/MyNotes";
 import ClassNotes from "./components/notes/ClassNotes";
 import AddNotes from "./components/notes/AddNotes";
-import Header from "./components/UI/navigation/Header";
-import Statistics from "./components/admin/Statistics";
+import Header from "./components/UI/navigation/Header.tsx";
+import Statistics from "./components/pages/Statistics/Statistics";
 
 function App() {
   return (
