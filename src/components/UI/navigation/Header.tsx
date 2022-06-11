@@ -1,9 +1,9 @@
 import { NotificationOutlined, UserOutlined } from "@ant-design/icons";
-import React, {useState} from "react";
-import styles from "./Header.module.css";
+import { useState, useEffect } from "react";
+const styles = require("./Header.module.css");
 
 const Header = () => {
-  const [searchItem, setSearchItem] = useState("");
+  const [searchItem, setSearchItem] = useState<number | string>("");
   const [searchResults, setSearchResults] = useState([]);
 
 

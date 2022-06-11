@@ -1,7 +1,7 @@
 .sidebarContainer{
     background-color: dodgerblue;
     font-size: 2rem;
-    height: 100vh;
+    height: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;

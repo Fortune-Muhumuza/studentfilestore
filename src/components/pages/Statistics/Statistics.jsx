@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Statistics.module.css";
-import { users } from "./dummyData";
-import UserDetailsCard from "../UI/cards/UserDetailsCard";
+import { useSelector } from "react-redux";
+import UserDetailsCard from "../../common/cards/UserCards/UserDetailsCard";
 import { Chart as ChartJS, registerables } from "chart.js";
-import { Chart } from "react-chartjs-2";
 import { Doughnut } from "react-chartjs-2";
-import { chartData } from "./chartData";
+import { chartData } from "../../admin/chartData";
 ChartJS.register(...registerables);
 
 const Statistics = () => {
+  const users = useSelector((state) => state.users);
   const [searchItem, setSearchItem] = useState("");
   const [searchResults, setSearchResults] = useState(users);
   const [isSearching, setIsSearching] = useState(false);
@@ -44,16 +44,15 @@ const Statistics = () => {
       <div className={styles.statisticsHeader}>
         <h1>statistics</h1>
       </div>
- 
-      
+
       <div className={styles.statisticsContents}>
-      <p>Filter</p>
+        <p>Filter</p>
         <input
           placeholder="search"
           value={searchItem}
           onChange={handleInputChange}
         ></input>
-     
+
         {isSearching && (
           <div>
             <h1>Searching...</h1>
@@ -64,17 +63,17 @@ const Statistics = () => {
           <Doughnut data={chartData} />
         </div>
         <div>
-        {searchResults.map((user) => (
-          <UserDetailsCard
-            firstName={user.firstName}
-            secondName={user.secondName}
-            email={user.email}
-            role={user.role}
-            rating={user.rating}
-            profilePicture={user.profilePicture}
-          />
-   
-        ))}
+          {searchResults.map((user) => (
+            <UserDetailsCard
+              key={user.id}
+              firstName={user.firstName}
+              secondName={user.secondName}
+              email={user.email}
+              role={user.role}
+              rating={user.rating}
+              profilePicture={user.profilePicture}
+            />
+          ))}
         </div>
       </div>
     </div>

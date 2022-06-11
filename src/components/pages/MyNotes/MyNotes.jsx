@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./MyNotes.module.css";
-import NotesCard from "../UI/cards/NotesCard";
+import NotesCard from "../../common/cards/NotesCards/NotesCard";
 
 const MyNotes = () => {
   const [favoriteNotes, setFavoriteNotes] = React.useState([]);

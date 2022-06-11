@@ -12,6 +12,24 @@ export const notes = [
     description: "Short description of the notes taht have been provided..",
   },
   {
+    id: 736,
+    title: "Sound",
+    format: "PPT",
+    description: "Short description of the notes taht have been provided..",
+  },
+  {
+    id: 758,
+    title: "Sound",
+    format: "PPT",
+    description: "Short description of the notes taht have been provided..",
+  },
+  {
+    id: 728,
+    title: "Sound",
+    format: "PPT",
+    description: "Short description of the notes taht have been provided..",
+  },
+  {
     id: 395,
     title: "Energy",
     format: "PDF",

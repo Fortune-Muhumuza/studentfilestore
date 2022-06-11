@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./Dashboard.module.css";
-import NotesCard from "../UI/cards/NotesCard";
-import { notes } from "../admin/dummyData";
+import NotesCard from "../../common/cards/NotesCards/NotesCard";
+import { useSelector } from "react-redux";
+
+
 
 const Dashboard = () => {
+  const notes = useSelector(state => state.notes)
   return (
     <div className={styles.dashboardContainer}>
       <div className={styles.dashboardHeader}>
