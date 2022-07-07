@@ -1,5 +1,10 @@
 import React from "react";
-import styles from "./UserDetailsCard.module.css";
+const styles =  require ('./UserDetailsCard.module.css');
+
+type Props = {
+  onClick: MouseEventHandler,
+  text: string,
+}
 
 const UserDetailsCard = (props) => {
   return (
